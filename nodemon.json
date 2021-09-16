@@ -1,0 +1,10 @@
+{
+	"env": {
+		"PORT": 8085,
+		"HOST": "localhost",
+		"USER": "postgres",
+		"PASSWORD": "abcd",
+		"DB": "marklists",
+		"DIALECT": "postgres"
+	}
+}

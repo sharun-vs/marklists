@@ -1,0 +1,28 @@
+{
+	"name": "marklists",
+	"version": "1.0.0",
+	"description": "manage student marklists",
+	"main": "app.js",
+	"scripts": {
+		"dev": "nodemon app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sharun-vs/marklists.git"
+	},
+	"author": "sharun vs",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/sharun-vs/marklists/issues"
+	},
+	"homepage": "https://github.com/sharun-vs/marklists#readme",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"nodemon": "^2.0.12",
+		"pg": "^8.7.1",
+		"pg-hstore": "^2.3.4",
+		"sequelize": "^6.6.5"
+	}
+}

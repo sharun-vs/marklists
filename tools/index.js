@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const { Sequelize, DataTypes } = require("sequelize");
 const fs = require("fs");
-const parse = require("node-csv");
 const fileupload = require("express-fileupload");
 const csvtojson = require("csvtojson");
 
@@ -18,7 +17,6 @@ module.exports = {
 	DataTypes: DataTypes,
 	ExpressRouter: ExpressRouter,
 	Fs: fs,
-	Parse: parse,
 	FileUpload: fileupload,
 	Csvtojson: csvtojson,
 };

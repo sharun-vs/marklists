@@ -1,4 +1,4 @@
-const { ExpressServer } = require("./tools");
+const { ExpressServer, FileUpload } = require("./tools");
 const db = require("./util/database.config");
 const studentRoutes = require("./modules/students/routes/student.routes");
 
@@ -9,6 +9,10 @@ db.authenticate()
 	.catch((err) => {
 		console.log(err);
 	});
+
+db.sync({ alter: true });
+
+ExpressServer.use(FileUpload({ createParentPath: true }));
 
 ExpressServer.get("/", (req, res, next) => {
 	res.json({ message: "Welcome to marklist Api" });

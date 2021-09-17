@@ -21,6 +21,9 @@ const Student = db.define(
 		mark3: {
 			type: DataTypes.FLOAT,
 		},
+		passed: {
+			type: DataTypes.BOOLEAN,
+		},
 	},
 	{ timestamps: true }
 );

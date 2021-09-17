@@ -1,6 +1,7 @@
 const { ExpressRouter, Csvtojson } = require("../../../tools");
 const Student = require("../models/student.model");
 
+//upload a file named file,read its contents and insert into db
 ExpressRouter.post("/upload", (req, res, next) => {
 	const file = req.files.file;
 	const csvData = file.data.toString("utf8");
@@ -23,6 +24,7 @@ ExpressRouter.post("/upload", (req, res, next) => {
 		});
 });
 
+//get resulsts of a student by passing his/her id,
 ExpressRouter.get("/student/:id/results", (req, res, next) => {
 	const studentId = req.params.id;
 
@@ -41,6 +43,7 @@ ExpressRouter.get("/student/:id/results", (req, res, next) => {
 	next();
 });
 
+//get resulsts of stuents according to query param: resultStatus = passed/failed
 ExpressRouter.get("/students", (req, res, next) => {
 	const resultStatus = req.query.resultStatus;
 	let status;

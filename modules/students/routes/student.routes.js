@@ -1,4 +1,4 @@
-const { ExpressRouter, Fs, Parse, Csvtojson } = require("../../../tools");
+const { ExpressRouter, Csvtojson } = require("../../../tools");
 const Student = require("../models/student.model");
 
 ExpressRouter.post("/upload", (req, res, next) => {
